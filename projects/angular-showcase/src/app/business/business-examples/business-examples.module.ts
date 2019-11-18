@@ -8,12 +8,16 @@ import { ContextmenuModule } from '@sbb-esta/angular-business/contextmenu';
 import { FieldModule } from '@sbb-esta/angular-business/field';
 import { HeaderModule } from '@sbb-esta/angular-business/header';
 import { ProcessflowModule } from '@sbb-esta/angular-business/processflow';
+import { TableModule } from '@sbb-esta/angular-business/table';
 import { TooltipModule } from '@sbb-esta/angular-business/tooltip';
 import { UserMenuModule } from '@sbb-esta/angular-business/usermenu';
 import { IconCollectionModule } from '@sbb-esta/angular-icons';
 
 import { SimpleContextmenuComponent } from './simple-contextmenu/simple-contextmenu.component';
 import { SkippableProcessflowComponent } from './skippable-processflow/skippable-processflow.component';
+import { TableShowcase1Component } from './table-showcase/table-showcase-1/table-showcase-1.component';
+import { TableShowcase2Component } from './table-showcase/table-showcase-2/table-showcase-2.component';
+import { TableShowcaseComponent } from './table-showcase/table-showcase.component';
 import { TooltipShowcaseComponent } from './tooltip-showcase/tooltip-showcase.component';
 import { UsermenuShowcaseComponent } from './usermenu-showcase/usermenu-showcase.component';
 
@@ -21,7 +25,10 @@ const exampleComponents = [
   SimpleContextmenuComponent,
   SkippableProcessflowComponent,
   TooltipShowcaseComponent,
-  UsermenuShowcaseComponent
+  UsermenuShowcaseComponent,
+  TableShowcaseComponent,
+  TableShowcase1Component,
+  TableShowcase2Component
 ];
 
 @NgModule({
@@ -41,7 +48,8 @@ const exampleComponents = [
     HeaderModule,
     ProcessflowModule,
     TooltipModule,
-    UserMenuModule
+    UserMenuModule,
+    TableModule
   ]
 })
 export class BusinessExamplesModule {}
