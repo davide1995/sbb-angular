@@ -8,7 +8,7 @@ import { ContextmenuModule } from '@sbb-esta/angular-business/contextmenu';
 import { FieldModule } from '@sbb-esta/angular-business/field';
 import { HeaderModule } from '@sbb-esta/angular-business/header';
 import { ProcessflowModule } from '@sbb-esta/angular-business/processflow';
-import { TableModule } from '@sbb-esta/angular-business/table';
+import { SbbSortModule, TableModule } from '@sbb-esta/angular-business/table';
 import { TooltipModule } from '@sbb-esta/angular-business/tooltip';
 import { UserMenuModule } from '@sbb-esta/angular-business/usermenu';
 import { IconCollectionModule } from '@sbb-esta/angular-icons';
@@ -18,6 +18,7 @@ import { SkippableProcessflowComponent } from './skippable-processflow/skippable
 import {
   TableShowcase1Component,
   TableShowcase2Component,
+  TableShowcase3Component,
   TableShowcaseComponent
 } from './table-showcase/table-showcase.component';
 import { TooltipShowcaseComponent } from './tooltip-showcase/tooltip-showcase.component';
@@ -30,7 +31,8 @@ const exampleComponents = [
   UsermenuShowcaseComponent,
   TableShowcaseComponent,
   TableShowcase1Component,
-  TableShowcase2Component
+  TableShowcase2Component,
+  TableShowcase3Component
 ];
 
 @NgModule({
@@ -51,7 +53,8 @@ const exampleComponents = [
     ProcessflowModule,
     TooltipModule,
     UserMenuModule,
-    TableModule
+    TableModule,
+    SbbSortModule
   ]
 })
 export class BusinessExamplesModule {}
