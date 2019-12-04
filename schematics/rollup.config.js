@@ -1,10 +1,12 @@
-import typescript from 'rollup-plugin-typescript2';
+import ts from '@wessberg/rollup-plugin-ts';
 import { join } from 'path';
 
 export default [
   'documentation',
   'example-migration',
+  'generate-from-svg-registry',
   'generate-icon-modules',
+  'init-svg-registry',
   'public2business'
 ].map(directory => ({
   input: join(__dirname, directory, 'index.ts'),
@@ -13,8 +15,11 @@ export default [
     format: 'cjs'
   },
   external: [
+    '@angular/cdk/schematics',
     '@angular-devkit/schematics',
     '@angular-devkit/core',
+    '@angular-devkit/core/src/utils/strings',
+    '@schematics/angular/utility/config',
     'dgeni',
     'dgeni-packages/typescript/api-doc-types/ApiDoc',
     'dgeni-packages/typescript/api-doc-types/ClassExportDoc',
@@ -29,13 +34,13 @@ export default [
     'path',
     'rxjs',
     'rxjs/operators',
+    'svgo',
     'typescript'
   ],
   plugins: [
-    typescript({
-      tsconfig: join(__dirname, 'tsconfig.json'),
-      //useTsconfigDeclarationDir: true,
-      cacheRoot: `${require('os').tmpdir()}/.rpt2_csas_${directory}`
+    ts({
+      browserslist: false,
+      tsconfig: join(__dirname, 'tsconfig.json')
     })
   ]
 }));

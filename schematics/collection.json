@@ -16,6 +16,16 @@
     "generate-icon-modules": {
       "description": "Generate icon modules.",
       "factory": "./generate-icon-modules/index#generateIconModules"
+    },
+    "init-svg-registry": {
+      "description": "Generate an svg registry, from which icon modules can be generated.",
+      "factory": "./init-svg-registry/index#initSvgRegistry",
+      "schema": "./init-svg-registry/schema.json"
+    },
+    "generate-from-svg-registry": {
+      "description": "Generate icon modules.",
+      "factory": "./generate-from-svg-registry/index#generateFromSvgRegistry",
+      "schema": "./generate-from-svg-registry/schema.json"
     }
   }
 }

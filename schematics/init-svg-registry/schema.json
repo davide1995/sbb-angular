@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "svgDir": {
+      "type": "string",
+      "description": "The directory of the svg files.",
+      "default": "svg"
+    },
+    "preserveNumberIds": {
+      "type": "boolean",
+      "description": "Whether the number ids in the file names should be preserved for the selector.",
+      "default": false
+    },
+    "preserveSbbInName": {
+      "type": "boolean",
+      "description": "Whether the string sbb or SBB in the file names should be preserved for the selector.",
+      "default": false
+    }
+  }
+}
