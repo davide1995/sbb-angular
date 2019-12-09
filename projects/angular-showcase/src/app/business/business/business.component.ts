@@ -4,7 +4,11 @@ import { Component } from '@angular/core';
 import { ExampleProvider } from '../../shared/example-provider';
 import { SimpleContextmenuComponent } from '../business-examples/simple-contextmenu/simple-contextmenu.component';
 import { SkippableProcessflowComponent } from '../business-examples/skippable-processflow/skippable-processflow.component';
-import { TableShowcaseComponent } from '../business-examples/table-showcase/table-showcase.component';
+import { TableActionsShowcaseComponent } from '../business-examples/table-showcase/table-actions-showcase/table-actions-showcase.component';
+import { TableGroupedColumnsShowcaseComponent } from '../business-examples/table-showcase/table-grouped-columns-showcase/table-grouped-columns-showcase.component';
+import { TableGroupedRowsShowcaseComponent } from '../business-examples/table-showcase/table-grouped-rows-showcase/table-grouped-rows-showcase.component';
+import { TableSimpleShowcaseComponent } from '../business-examples/table-showcase/table-simple-showcase/table-simple-showcase.component';
+import { TableSortShowcaseComponent } from '../business-examples/table-showcase/table-sort-showcase/table-sort-showcase.component';
 import { TooltipShowcaseComponent } from '../business-examples/tooltip-showcase/tooltip-showcase.component';
 import { UsermenuShowcaseComponent } from '../business-examples/usermenu-showcase/usermenu-showcase.component';
 
@@ -55,7 +59,11 @@ export class BusinessComponent implements ExampleProvider {
       'usermenu-showcase': new ComponentPortal(UsermenuShowcaseComponent)
     },
     table: {
-      'table-showcase': new ComponentPortal(TableShowcaseComponent)
+      'simple-table': new ComponentPortal(TableSimpleShowcaseComponent),
+      'action-table': new ComponentPortal(TableActionsShowcaseComponent),
+      'grouped-columns-table': new ComponentPortal(TableGroupedColumnsShowcaseComponent),
+      'grouped-rows-table': new ComponentPortal(TableGroupedRowsShowcaseComponent),
+      'sortable-table': new ComponentPortal(TableSortShowcaseComponent)
     }
   };
 
