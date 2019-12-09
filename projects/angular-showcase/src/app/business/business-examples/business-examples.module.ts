@@ -15,12 +15,10 @@ import { IconCollectionModule } from '@sbb-esta/angular-icons';
 
 import { SimpleContextmenuComponent } from './simple-contextmenu/simple-contextmenu.component';
 import { SkippableProcessflowComponent } from './skippable-processflow/skippable-processflow.component';
-import {
-  TableShowcase1Component,
-  TableShowcase2Component,
-  TableShowcase3Component,
-  TableShowcaseComponent
-} from './table-showcase/table-showcase.component';
+import { TableActionsShowcaseComponent } from './table-showcase/table-actions-showcase/table-actions-showcase.component';
+import { TableGroupedRowsShowcaseComponent } from './table-showcase/table-grouped-rows-showcase/table-grouped-rows-showcase.component';
+import { TableShowcaseComponent } from './table-showcase/table-showcase.component';
+import { TableSortShowcaseComponent } from './table-showcase/table-sort-showcase/table-sort-showcase.component';
 import { TooltipShowcaseComponent } from './tooltip-showcase/tooltip-showcase.component';
 import { UsermenuShowcaseComponent } from './usermenu-showcase/usermenu-showcase.component';
 
@@ -30,9 +28,9 @@ const exampleComponents = [
   TooltipShowcaseComponent,
   UsermenuShowcaseComponent,
   TableShowcaseComponent,
-  TableShowcase1Component,
-  TableShowcase2Component,
-  TableShowcase3Component
+  TableActionsShowcaseComponent,
+  TableGroupedRowsShowcaseComponent,
+  TableSortShowcaseComponent
 ];
 
 @NgModule({
