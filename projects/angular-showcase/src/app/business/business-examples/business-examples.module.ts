@@ -8,6 +8,7 @@ import { ContextmenuModule } from '@sbb-esta/angular-business/contextmenu';
 import { DialogModule } from '@sbb-esta/angular-business/dialog';
 import { FieldModule } from '@sbb-esta/angular-business/field';
 import { HeaderModule } from '@sbb-esta/angular-business/header';
+import { NotificationsModule } from '@sbb-esta/angular-business/notification';
 import { ProcessflowModule } from '@sbb-esta/angular-business/processflow';
 import { RadioButtonModule } from '@sbb-esta/angular-business/radio-button';
 import { TabsModule } from '@sbb-esta/angular-business/tabs';
@@ -23,6 +24,11 @@ import {
   DialogShowcaseExampleComponent,
   DialogShowcaseExampleContentComponent
 } from './dialog-showcase/dialog-showcase.component';
+import { ClosableNotificationComponent } from './notification-showcase/closable-notification/closable-notification.component';
+import { CustomIconNotificationComponent } from './notification-showcase/custom-icon-notification/custom-icon-notification.component';
+import { JumpmarkNotificationComponent } from './notification-showcase/jumpmark-notification/jumpmark-notification.component';
+import { SimpleNotificationComponent } from './notification-showcase/simple-notification/simple-notification.component';
+import { ToastNotificationComponent } from './notification-showcase/toast-notification/toast-notification.component';
 import { SimpleContextmenuComponent } from './simple-contextmenu/simple-contextmenu.component';
 import { SkippableProcessflowComponent } from './skippable-processflow/skippable-processflow.component';
 import { PersonListComponent } from './tabs-showcase/person/person-list/person-list.component';
@@ -42,7 +48,12 @@ const exampleComponents = [
   DialogShowcaseExampleContentComponent,
   DialogShowcaseExample2Component,
   DialogShowcaseExample2ContentComponent,
-  DialogShowcaseExample3Component
+  DialogShowcaseExample3Component,
+  CustomIconNotificationComponent,
+  SimpleNotificationComponent,
+  JumpmarkNotificationComponent,
+  ToastNotificationComponent,
+  ClosableNotificationComponent
 ];
 
 @NgModule({
@@ -65,7 +76,8 @@ const exampleComponents = [
     TabsModule,
     UserMenuModule,
     DialogModule,
-    RadioButtonModule
+    RadioButtonModule,
+    NotificationsModule
   ]
 })
 export class BusinessExamplesModule {}

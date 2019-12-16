@@ -3,6 +3,11 @@ import { Component } from '@angular/core';
 
 import { ExampleProvider } from '../../shared/example-provider';
 import { DialogShowcaseComponent } from '../business-examples/dialog-showcase/dialog-showcase.component';
+import { ClosableNotificationComponent } from '../business-examples/notification-showcase/closable-notification/closable-notification.component';
+import { CustomIconNotificationComponent } from '../business-examples/notification-showcase/custom-icon-notification/custom-icon-notification.component';
+import { JumpmarkNotificationComponent } from '../business-examples/notification-showcase/jumpmark-notification/jumpmark-notification.component';
+import { SimpleNotificationComponent } from '../business-examples/notification-showcase/simple-notification/simple-notification.component';
+import { ToastNotificationComponent } from '../business-examples/notification-showcase/toast-notification/toast-notification.component';
 import { SimpleContextmenuComponent } from '../business-examples/simple-contextmenu/simple-contextmenu.component';
 import { SkippableProcessflowComponent } from '../business-examples/skippable-processflow/skippable-processflow.component';
 import { TabsShowcaseComponent } from '../business-examples/tabs-showcase/tabs-showcase.component';
@@ -31,6 +36,7 @@ export class BusinessComponent implements ExampleProvider {
   };
   layoutComponents = {
     accordion: 'Accordion',
+    notification: 'Notification',
     processflow: 'Processflow',
     tabs: 'Tabs',
     usermenu: 'Usermenu'
@@ -61,6 +67,13 @@ export class BusinessComponent implements ExampleProvider {
     },
     dialog: {
       'dialog-showcase': new ComponentPortal(DialogShowcaseComponent)
+    },
+    notification: {
+      'simple-notification': new ComponentPortal(SimpleNotificationComponent),
+      'custom-icon-notification': new ComponentPortal(CustomIconNotificationComponent),
+      'toast-notification': new ComponentPortal(ToastNotificationComponent),
+      'jumpmark-notification': new ComponentPortal(JumpmarkNotificationComponent),
+      'closable-notification': new ComponentPortal(ClosableNotificationComponent)
     }
   };
 
